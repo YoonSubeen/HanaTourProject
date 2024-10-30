@@ -936,10 +936,6 @@
 								 			}
 										}
 									 	%>
-									 	
-									 	
-									 	
-							
 									 	</div> <!-- 왼쪽 회색줄 끝나는 부분 -->
 									</div> <!-- 접히는 부분 종료 -->
 								<% } %>
@@ -1093,8 +1089,6 @@
 								for(int i=1; i<=(oneFlightInfo.getPeriod()+1); i++) {
 							%>
 							<div><strong><%=i %>일차</strong> <span class="grey_font"></span></div> <!-- 일자 못넣은 자리 -->
-							
-							<!-- ★질문 일차에 맞는 관광지 정보넣어주는 것과 일차기 증가하는데 문자열로 받아서 연산자 사용의 불가능. 하지만 요일까지 나와야 하는데 어쩔까요? -->
 								<%
 								for (HotelAttractionAttractionDto dto : hotelAttractionAttraction) {
 									if(dto.getDay() == i) {

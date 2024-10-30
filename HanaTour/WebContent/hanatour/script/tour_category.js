@@ -128,8 +128,6 @@ $(function() {
 	    }
 	});
 	
-
-	
 // 클릭시 팝업 더블시 검색창
 	$("#where_hide").hide();
 	$("#doubleclick_search").hide();
@@ -175,29 +173,13 @@ $(function() {
 	        });
     	}
 	});
-	
 
-	//상품비교함 3개짜리
+//상품비교함 3개짜리
 	$('#compare_content > div:nth-child(3) > button:nth-child(2)').click(function() {
 		$('#compare_in').show();  // This will show the element with id compare_in
 		$('#div_fullscreen_grey').show();  // This will ...
     }); 
 });
-
-	
-	
-/*	$("#div_fullscreen_grey").scroll(function(event) {
-		console.log("스크롤을 막...");
-		event.stopPropagation(); ------- NOT WORKING
-	});
-*/	
-/*	$("body").on('scroll', function() {
-		alert("야 되잖아");
-	}); 
-	
-	$("body").click(function() {
-		alert("이건...?");
-	});*/
 
 	//상품함 숨기고 보이기 작업하는 동안 잠깐 걸어놔서 풀어야 한다
 	$(".product_hide").hide();
@@ -211,11 +193,9 @@ $(function() {
     let utc = date.getTime() + (date.getTimezoneOffset() * 60 * 1000); // uct 표준시 도출
     let kstGap = 9 * 60 * 60 * 1000; // 한국 kst 기준시간 더하기
     let today = new Date(utc + kstGap); // 한국 시간으로 date 객체 만들기(오늘)
-  
     let thisMonth = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    // 달력에서 표기하는 날짜 객체
-  
     
+// 달력에서 표기하는 날짜 객체
     let currentYear = thisMonth.getFullYear(); // 달력에서 표기하는 연
     let currentMonth = thisMonth.getMonth()+1; // 달력에서 표기하는 월
     let currentDate = thisMonth.getDate(); // 달력에서 표기하는 일
@@ -230,10 +210,6 @@ $(function() {
 			currentMonth = 12;
 		}
 		$(this).parent().find(".show_date").text(currentYear + "년 " + currentMonth + "월");
-//        thisMonth = new Date(currentYear, currentMonth - 1, 1);
-//        currentMonth = thisMonth.getMonth(); 
-//		alert(thisMonth);
-//        renderCalender(thisMonth);
 		makeCalenders();
     });
 
@@ -245,13 +221,8 @@ $(function() {
 			currentMonth = 1;
 		}
 		$(this).parent().find(".show_date").text(currentYear + "년 " + currentMonth + "월");
-//        thisMonth = new Date(currentYear, currentMonth + 1, 1);
-//        currentMonth = thisMonth.getMonth();   // 0~11
-//		alert(thisMonth);
-//        renderCalender(thisMonth); 
 		makeCalenders();
     });
-/* } */
 	
 //상품비교함 배열
 	$("#compare_in > div:nth-child(1) >div:nth-child(2) > button:nth-child(1)").click(function() {
@@ -357,22 +328,5 @@ function makeCalenders() {
 		
 		리스트가져와서그려();
 	});	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 });

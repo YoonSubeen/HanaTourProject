@@ -89,12 +89,10 @@ public class TourPackageFormAction implements Action {
 		PackageMeetingInfoDto packageMeetingInfo = packageMeetingInfoDto.get(0);	// 패키지 미팅 데이터 한 줄 
 		
 		
-		// String ------> Date객체 + 날짜연산 -----> String
-		// date부터 시작해서 scheduleTitle.size()까지  // ex. "2024.08.02(금)"부터 시작해서 +5일까지. ----> ArrayList<String> listDateString(size:5) 에 넣을게요.
+		// 여행일정의 여행일자 계산
 		int sizeDate = scheduleTitle.size();
 		ArrayList<String> listDateString = new ArrayList<String>();
 		for(int i=0; i<=sizeDate-1; i++) {
-			// "2024.08.02(금)" 를 Date 객체로.
 			Calendar cal = Calendar.getInstance();
 			int yearNum = Integer.parseInt(date.substring(0,4));
 			int monthNum = Integer.parseInt(date.substring(5,7));
@@ -114,7 +112,6 @@ public class TourPackageFormAction implements Action {
 		}
 		
 		
-		// date 없애기 생각해보기
 		request.setAttribute("packageIdx", packageIdx);
 		System.out.println(packageIdx + "2");
 		request.setAttribute("countryCity" , countryCity);

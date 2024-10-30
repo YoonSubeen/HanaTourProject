@@ -98,21 +98,9 @@ $(function () {
     $("#travel_trip_detail").show(); //원래형태
 	$("#long_content > div").not("#long_content_header, #travel_trip_detail").hide();
 	
-	// $("hotel_attraction_detail").show(); //호텔&관광지 먼저보여주기
-	// $("#long_content > div").not("#long_content_header, #hotel_attraction_detail").hide();
-	
-	// $("three_note_detail").show();
-	// $("#long_content > div").not("#long_content_header, #three_note_detail").hide();
-	
-	//$("#travel_review_detail").show();
-	//$("#long_content > div").not("#long_content_header, #travel_review_detail").hide();
-	
-	
-	
 	$("#long_content_header > div").click(function () {
     // 모든 버튼의 스타일을 초기화합니다.
     $("#long_content_header > div").css("background-color", "")
-                					.css("color", "");
                 
     // 클릭된 버튼의 스타일을 변경합니다.
     $(this).css("background-color", "#5e2bb8")
@@ -135,9 +123,7 @@ $(function () {
     } else if(this.id=="optional_tour") {
 		$("#optional_tour_detail").show();
 	}
-
 	});
-	
 	
 //호텔&관광지 
 //호텔정보와 관광지 정보 나타내기 
@@ -169,10 +155,8 @@ $(function () {
 		}													
 	});
 	
-	
 //참고사항
 //참고사항 유의사항 결제/혜택/보험 비상연락처 정보 각각 보여주기
-
 		//기본적으로 유의사항 정보 선택 
 		$("#notice").css({
 		    "border": "1px solid black",
@@ -224,8 +208,6 @@ $(function () {
 		let smallBox = $(this).index(); // 작은 상자의 index 찾기
 		$(".hotel_total_info").hide(); // 전체 숨기고 
 		$(".hotel_total_info").eq(smallBox).show(); // 클릭한 것의 전체 정보만 보여주기
-		
-		
 	});	
 	
 // 후기 더보기 누르는 기능 
@@ -298,9 +280,6 @@ $(function () {
 	        event.preventDefault();
 	    }
 	});
-
-	
-	
 		
 });		
 		
